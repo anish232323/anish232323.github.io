@@ -6,82 +6,86 @@
   <title>Your Name | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="nav">
     <div class="nav__brand" id="brandName">Your Name</div>
     <nav class="nav__links">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#awards">Awards</a>
-      <a href="#contact">Contact</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#awards" class="nav-link">Awards</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </nav>
     <div class="nav__socials">
-      <a id="githubLink" target="_blank" rel="noreferrer">GitHub</a>
-      <a id="linkedinLink" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a id="githubLink" target="_blank" rel="noreferrer" class="social-link">GitHub</a>
+      <a id="linkedinLink" target="_blank" rel="noreferrer" class="social-link">LinkedIn</a>
     </div>
   </header>
 
   <main>
     <section class="hero" id="top">
-      <div class="hero__text">
-        <p class="eyebrow">Hi, I’m</p>
-        <h1 id="heroName">Your Name</h1>
+      <div class="hero__text fade-in">
+        <p class="eyebrow">Hi, I'm</p>
+        <h1 id="heroName" class="gradient-text">Your Name</h1>
         <h2 id="heroRole">Engineer | Builder</h2>
         <p id="heroSummary">I design and ship web systems with a focus on clarity, performance, and developer experience.</p>
         <div class="hero__cta">
-          <a id="resumeLink" class="btn" target="_blank" rel="noreferrer">Resume</a>
-          <a class="btn btn--ghost" href="#contact">Contact</a>
+          <a id="resumeLink" class="btn btn-primary" target="_blank" rel="noreferrer">Resume</a>
+          <a class="btn btn-secondary" href="#contact">Contact</a>
         </div>
       </div>
-      <div class="hero__photo">
-        <img id="heroPhoto" src="assets/profile.jpg" alt="Profile photo">
+      <div class="hero__photo fade-in-delay">
+        <div class="photo-wrapper">
+          <img id="heroPhoto" src="assets/profile.jpg" alt="Profile photo">
+        </div>
       </div>
     </section>
 
-    <section id="about" class="section">
-      <h3>About</h3>
-      <p id="aboutText"></p>
+    <section id="about" class="section fade-in-up">
+      <h3 class="section-title">About</h3>
+      <p id="aboutText" class="section-content"></p>
     </section>
 
-    <section id="experience" class="section">
-      <h3>Experience</h3>
+    <section id="experience" class="section fade-in-up">
+      <h3 class="section-title">Experience</h3>
       <div id="experienceList" class="cards"></div>
     </section>
 
-    <section id="projects" class="section">
-      <h3>Projects</h3>
+    <section id="projects" class="section fade-in-up">
+      <h3 class="section-title">Projects</h3>
       <div id="projectList" class="cards cards--grid"></div>
     </section>
 
-    <section id="skills" class="section">
-      <h3>Skills</h3>
+    <section id="skills" class="section fade-in-up">
+      <h3 class="section-title">Skills</h3>
       <div id="skillsList" class="chips"></div>
     </section>
 
-    <section id="education" class="section">
-      <h3>Education</h3>
+    <section id="education" class="section fade-in-up">
+      <h3 class="section-title">Education</h3>
       <div id="educationList" class="cards"></div>
     </section>
 
-    <section id="awards" class="section">
-      <h3>Awards</h3>
+    <section id="awards" class="section fade-in-up">
+      <h3 class="section-title">Awards</h3>
       <ul id="awardsList" class="list"></ul>
     </section>
 
-    <section id="contact" class="section">
-      <h3>Contact</h3>
-      <p>Email: <a id="emailLink" href="mailto:you@example.com">you@example.com</a></p>
-      <p>Location: <span id="locationText">City, Country</span></p>
+    <section id="contact" class="section fade-in-up">
+      <h3 class="section-title">Contact</h3>
+      <div class="contact-content">
+        <p>Email: <a id="emailLink" href="mailto:you@example.com" class="contact-link">you@example.com</a></p>
+        <p>Location: <span id="locationText">City, Country</span></p>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
-    <span>© <span id="footerName">Your Name</span></span>
+    <span>© <span id="footerName">Your Name</span> <span id="currentYear"></span></span>
     <span>Built with HTML/CSS/JS, hosted on GitHub Pages</span>
   </footer>
 
